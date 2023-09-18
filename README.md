@@ -20,6 +20,9 @@ It also notifies you of this change via mail and pushbullet or ifttt.
 
 (see requirements.txt)
 
+## Tested on
+
+* Ubuntu 23.04
 
 ## Installation
 
