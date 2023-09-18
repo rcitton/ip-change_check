@@ -69,6 +69,7 @@ Use OS or Docker environmet variables to configure the program run.
 | NOTIFICATION_PASSWORD   |                      | Notification token/password                                  |
 | OUTAGE_CHECK            |         60            | Outage check interval  (min)                                 |
 | HOUSE_ADDRESS           |                      | Description of the run location                              |
+| CRONTAB           |        False              | Il will make the crontab entry                              |
 
 
 ## How to setup GMail
