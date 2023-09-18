@@ -59,17 +59,17 @@ Use OS or Docker environmet variables to configure the program run.
 
 | Variable                | Default Value        | Informations                                                 |
 |:------------------------|:---------------------|:-------------------------------------------------------------|
-| NOTIFICATION_TYPE       |                      | Notification type: none, ifttt, pushbullet                   |
-| SENDER_MAIL_ADDRESS     |                      | Sender mail address                                          |
-| RECEIVER_MAIL_ADDRESSES |                      | Receiver mail address                                        |
-| SMTP_SERVER             |                      | SMTP Server address                                          |
-| SMTP_SERVER_PORT        |                      | SMTP Server Port                                             |
-| MAIL_PASSWORD              |                      | SMTP Mail password
-| IFTTT_NAME              |                      | IFTTT Name                                                   |
-| NOTIFICATION_PASSWORD   |                      | Notification token/password                                  |
-| OUTAGE_CHECK            |         60            | Outage check interval  (min)                                 |
-| HOUSE_ADDRESS           |                      | Description of the run location                              |
-| CRONTAB           |        False              | Il will make the crontab entry                              |
+| NOTIFICATION_TYPE       |                      | Notification type: none, ifttt, pushbullet|
+| SENDER_MAIL_ADDRESS     |                      | Sender mail address|
+| RECEIVER_MAIL_ADDRESSES |                      | Receiver mail address|
+| SMTP_SERVER             |                      | SMTP Server address|
+| SMTP_SERVER_PORT        |                      | SMTP Server Port|
+| MAIL_PASSWORD           |                      | SMTP Mail password
+| IFTTT_NAME              |                      | IFTTT Name|
+| NOTIFICATION_PASSWORD   |                      | Notification token/password |
+| OUTAGE_CHECK            |         60           | Outage check interval  (min)|
+| HOUSE_ADDRESS           |                      | Description of the run location|
+| CRONTAB                 |        False         | Il will make the crontab entry|
 
 
 ## How to setup GMail
@@ -96,7 +96,7 @@ The generated token is your 'NOTIFICATION_PASSWORD'.
 
 Install the IFTTT app and either create an account or sign in to an existing account and create a new applet. 
 
-Next, select the 'add' button beside the word 'If This' and choose the Webhooks service. Select 'Recieve a web request', choose an event name (i.e.' OutageDetector') — you will need to remember this for 'IFTTT_NAME'. Select 'Create trigger' button
+Next, select the 'add' button beside the word 'If This' and choose the Webhooks service. Select 'Recieve a web request', choose an event name (i.e.' IPChange_check') — you will need to remember this for 'IFTTT_NAME'. Select 'Create trigger' button
 
 Select the 'add' button beside the word 'Then That' and choose any action that you like. For example 'Notifications'.
 Clear everything from the message text box and choose Value1 from the Insert Ingredients menu. Enter any necessary information and press 'Create action'.
