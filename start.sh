@@ -32,7 +32,14 @@
 # -------------------------------------------------------------------------------
 
 pip install --no-cache-dir -r requirements.txt
-python ./initial_config.py
+if [ $? -eq 0 ]; then
+  python3 ./initial_config.py
+else
+  echo
+  echo "*****************************"
+  echo " Requirements install failed "
+  echo "*****************************"
+fi
 # -------------------
 # EndOfFile
 # -------------------
