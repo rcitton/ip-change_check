@@ -38,9 +38,9 @@ import socket
 
 import keyring
 
-import pushbullet_notification as pushbullet
-import ifttt_notification as ifttt
-import sendmail as mail
+from notifications import pushbullet_notification as pushbullet
+from notifications import ifttt_notification as ifttt
+from notifications import sendmail as mail
 
 
 def sent_notification(old_ip, new_ip):

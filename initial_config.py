@@ -78,6 +78,17 @@ def banner():
     print ("╚═╝╚═╝░░░░░  ░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░╚══════╝  ░╚════╝░╚═╝░░╚═╝╚══════╝░╚════╝░╚═╝░░╚═╝")
     print ("")
 
+
+
+def get_integer_input():
+    while True:
+        minute_interval = input("- Provide the minute interval: ")
+        if minute_interval.isnumeric():  # Check if input is a number
+            minute_interval = int(minute_interval)  # Convert it to number
+            return minute_interval
+        else:  # if it is not a number
+            print("The input is not a number.")
+
 def curate_input(shown_message, expected_values):
     result = input(shown_message)
     if result in expected_values:
@@ -114,7 +125,7 @@ def initialize():
     print("We are going to walk you through setting up this script!")
     if notification_type is None:
         notification_type = curate_input("- Would you like to be alerted of an ip change through mail and by a notification"
-                                         " on your pushbullet or through ifttt? ",
+                                         " on your pushbullet or through ifttt? ('', 'pushbullet', 'ifttt')",
                                          ("", "pushbullet", "ifttt"))
     json_data["notification_type"] = notification_type
 
@@ -166,7 +177,7 @@ def initialize():
             break
 
         try:
-            mail.send_mail(json_data["sender"], json_data["receivers"], "Outage Detector - Testing mail notification",
+            mail.send_mail(json_data["sender"], json_data["receivers"], "IP Change Detector - Testing mail notification",
                            "Mail sent successfully!", json_data["smtp_server"], password, json_data["port"])
             mail_working = True
             print("Mail has been successfully sent, check your mailbox!")
@@ -262,6 +273,7 @@ def initialize():
         crontab_edit = 'y'
 
     if crontab_edit == "y":
+        ipchange_check = get_integer_input()
         exec_path = os.path.join(os.getcwd(), "IP-check.py")
         cron_scheduling.schedule_job(exec_path, config_path, int(ipchange_check))
 

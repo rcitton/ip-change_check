@@ -116,7 +116,7 @@ See details at https://www.pushbullet.com/
 You may test your OutageDetector notification setup issuing the command:
 
 ```
-python3 ./notifications/notification.py
+python3 ./notifications_test.py
 ```
 
 ## Change the configuration

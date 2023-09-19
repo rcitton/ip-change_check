@@ -29,23 +29,13 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-# ------------------------------------------------------------------------------
-
-import os
-import sys
-
-from crontab import CronTab
-
-def uninstall():
-    cron = CronTab(user=True)
-    comment = "ipchange_checker"
-    cron_job = cron.find_comment(comment)
-    cron.remove(cron_job)
-    cron.write()
-    print ("Uninstalled ipchange_checker")
+# -------------------------------------------------------------------------------
 
 
-uninstall()
+from notifications import notification
+
+
+notification.sent_notification("", "")
 
 # --------------
 # EndOfFile

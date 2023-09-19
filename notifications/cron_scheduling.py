@@ -39,9 +39,10 @@ from crontab import CronTab
 
 def schedule_job(script_path, log_path, minute_periodicity=0):
     interpreter_path = sys.executable
-    command = "{} >> {}/ip-changed.log 2>{}/ip-changed.err".format(script_path, 
-                                                                   log_path,
-                                                                   log_path)
+    command = "{} {} >> {}/ip-changed.log 2>{}/ip-changed.err".format(interpreter_path,
+                                                                      script_path, 
+                                                                      log_path,
+                                                                      log_path)
     crontab = CronTab(user=True)
     cronjob = crontab.new(command=command, comment='ipchange_checker')
     if minute_periodicity != 0 :
