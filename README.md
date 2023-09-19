@@ -23,6 +23,7 @@ It also notifies you of this change via mail and pushbullet or ifttt.
 ## Tested on
 
 * Ubuntu 23.04
+* Raspberry PI 4 arm64 (with Docker)
 
 ## Installation
 
@@ -73,6 +74,67 @@ Use OS or Docker environmet variables to configure the program run.
 | OUTAGE_CHECK            |         60           | Outage check interval  (min)|
 | HOUSE_ADDRESS           |                      | Description of the run location|
 | CRONTAB                 |        False         | Il will make the crontab entry|
+
+
+## Installation using Docker/Podman
+
+A Makefile is available to facilitate the setup/maintenance process
+
+### Initial Setup
+
+Run following command to setup the docker/podman 'ipcc' container:
+
+    make all
+
+`make all` will execute following make command in sequence:
+
+* 'make build' --> It will make the `ip-change_check` 
+* 'make create'--> It will create `ipcc` container
+* 'make start' --> It will start `ipcc` container
+* 'make setup' --> It will setup the ip-change-check
+
+### Start & Stop
+
+The container `ipcc` cna be started and stopped issuing
+
+    make start
+    make stop
+
+### Connect
+
+You can go inside `ipcc` container issuing:
+
+    make connect
+
+### Notification check
+
+Notification setup can be tested running:
+
+    make test
+
+### Setup change
+
+You may reconfigure `ipcc` container issuing:
+
+    make setup
+
+### Clean
+
+Docker/Podman IP change check image and container can be cleaned up issuing
+
+    make clean
+
+Pay attention as both the image and the container will be removed
+
+## Switch from Docker to Podman
+
+If you need setup IP change check on Podman, edit the Makefile at line 40 and cahnge the line from
+
+    RUNTIMECT=$(DOCKER)
+
+to
+
+    RUNTIMECT=$(PODMAN)
 
 
 ## How to setup GMail
