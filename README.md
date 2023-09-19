@@ -57,6 +57,20 @@ Following command will disable the `ipchange_checker` user contab entry
 
     ./remove.sh
 
+## Test Notification setup
+You may test your OutageDetector notification setup issuing the command:
+
+```
+python3 ./notifications_test.py
+```
+
+## Change the configuration
+Run again:
+
+```
+python3 ./initial_config.py
+```
+
 ## Environment Variables
 
 Use OS or Docker environmet variables to configure the program run.
@@ -174,16 +188,3 @@ Select the Webhooks icon in the top left of the screen and press the 'Documentat
 ## How to setup PushBullet
 See details at https://www.pushbullet.com/
 
-## Test Notification setup
-You may test your OutageDetector notification setup issuing the command:
-
-```
-python3 ./notifications_test.py
-```
-
-## Change the configuration
-Run again:
-
-```
-python3 ./initial_config.py
-```
