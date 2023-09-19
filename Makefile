@@ -21,7 +21,7 @@ RUNTIMECT=$(DOCKER)
 all: build \
 	create \
 	start \
-	setup	
+	setup
 
 build:
 	@echo "Make CONTAINER $(CONTAINER)"
