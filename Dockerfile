@@ -12,6 +12,7 @@ ENV TZ=Europe/Rome
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+# Set prompt
 RUN echo 'export PS1="[🌐 \e[0;34m\h\e[0m \w]# "' >> /root/.bashrc
 
 # Install dependencies
@@ -21,6 +22,7 @@ RUN apt-get -q -y install --no-install-recommends apt-utils cron tzdata
 # Clean up
 RUN apt-get -q -y autoremove && apt-get -q -y clean
 RUN rm -rf /var/lib/apt/lists/*
+
 
 # Install python requirements
 WORKDIR /app

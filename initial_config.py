@@ -125,7 +125,7 @@ def initialize():
     print("We are going to walk you through setting up this script!")
     if notification_type is None:
         notification_type = curate_input("- Would you like to be alerted of an ip change through mail and by a notification"
-                                         " on your pushbullet or through ifttt? ('', 'pushbullet', 'ifttt')",
+                                         " on your pushbullet or through ifttt? ('', 'pushbullet', 'ifttt'): ",
                                          ("", "pushbullet", "ifttt"))
     json_data["notification_type"] = notification_type
 
