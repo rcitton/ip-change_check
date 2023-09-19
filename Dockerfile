@@ -37,6 +37,10 @@ COPY IP-check.py IP-check.py
 COPY notification_test.py notification_test.py
 COPY README.md README.md
 
+COPY entrypoint.sh entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+
+
 # Execution
-ENTRYPOINT ["/usr/local/bin/python3", "/app/initial_config.py"]
+ENTRYPOINT ["/app/entrypoint.sh"]
 #CMD ["bash"]
