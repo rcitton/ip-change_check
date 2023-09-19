@@ -123,5 +123,5 @@ python3 ./notifications_test.py
 Run again:
 
 ```
-python3 initial_config.py
+python3 ./initial_config.py
 ```

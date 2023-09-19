@@ -38,5 +38,5 @@ COPY notification_test.py notification_test.py
 COPY README.md README.md
 
 # Execution
-#ENTRYPOINT ["/usr/local/bin/python3", "/app/initial_config.py"]
-CMD ["bash"]
+ENTRYPOINT ["/usr/local/bin/python3", "/app/initial_config.py"]
+#CMD ["bash"]
