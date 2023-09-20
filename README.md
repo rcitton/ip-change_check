@@ -31,8 +31,7 @@ Install pushbullet.py, issuing:
 
     ./start.sh
 
-Once the requirements are installed, `initial_config.py` will be executed. An example of the configuration workflow is as following:
-![](.image.png)
+Once the requirements are installed, `initial_config.py` will be executed. 
 
 At this time you will have a new entry in user crontab as following:
 
@@ -79,7 +78,8 @@ Use OS or Docker environmet variables to configure the program run.
 
 ## Installation using Docker/Podman
 
-A Makefile is available to facilitate the setup/maintenance process
+A Makefile is available to facilitate the setup/maintenance process. An example of setup workflow is as following:
+![](.image.png)
 
 ### Initial Setup
 
