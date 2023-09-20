@@ -32,9 +32,9 @@
 
 
 ###########################
-CONTAINER=ipcc
+CONTAINER=ipchange_check
 IMGNME=ip-change_check
-IMGVRS=1
+IMGVRS=1.0.0
 DOCKER=/usr/bin/docker
 PODMAN=/usr/bin/podman
 RUNTIMECT=$(DOCKER)
