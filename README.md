@@ -32,20 +32,7 @@ Install pushbullet.py, issuing:
     ./start.sh
 
 Once the requirements are installed, `initial_config.py` will be executed. An example of the configuration workflow is as following:
-
-    IP Change Check
-
-    We are going to walk you through setting up this script!
-    - Would you like to be alerted of an ip change through mail and by a notification on your pushbullet or through ifttt? pushbullet
-    - Please input the mail address you want to send the notification mail from: rcitton@gmail.com
-    - Type in your password: 
-    - Please input the mail addresses (separated by a comma) to which you want to send the notification: rcitton@gmail.com
-    Mail has been successfully sent, check your mailbox!
-    - Input your PushBullet API key: 
-    Trying to send a notification through PushBullet!
-    Notification has been successfully sent, check your phone!
-    - Enter a description of the run location (used to tell you in the pushbullet where the ip cahnge happened): HomeSweetHome
-    - Would you like to setup the script to run automatically (it will run at boot time and at given minute intervals)? (y/n) y
+![](.image.png)
 
 At this time you will have a new entry in user crontab as following:
 
