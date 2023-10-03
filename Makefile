@@ -59,6 +59,7 @@ create:
     ifeq ($(RUNTIMECT),/usr/bin/docker)
 		$(RUNTIMECT) create -t -i \
 			--hostname $(CONTAINER) \
+			--label com.centurylinklabs.watchtower.enable="false" \
 			--volume /etc/localtime:/etc/localtime:ro \
 			--restart=always \
 			--name $(CONTAINER) \
@@ -66,6 +67,7 @@ create:
     else
 		$(RUNTIMECT) create -t -i \
 			--hostname $(CONTAINER) \
+			--label com.centurylinklabs.watchtower.enable="false" \
 			--volume /etc/localtime:/etc/localtime:ro \
 			--restart=always \
 			--name $(CONTAINER) \

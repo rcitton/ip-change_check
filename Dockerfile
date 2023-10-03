@@ -7,6 +7,7 @@ LABEL \
   description="Module to notify user if public IP change has occured" \
   created=$BUILD_DATE
 
+#ENV WATCHTOWER_LABEL_ENABLE=0
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Rome
 
